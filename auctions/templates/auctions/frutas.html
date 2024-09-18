@@ -1,0 +1,13 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="container">
+    {% for fruta in frutas %}
+    <a href="{% url 'fruta' id=fruta.id %}">
+        <h3>{{ fruta.nombre }}</h3>
+    </a>
+        <p>{{ fruta.descripcion }}</p>
+        <h4>{{ fruta.precio }}</h4>
+    {% endfor %}
+</div>
+{% endblock body %}
